@@ -5,6 +5,8 @@ import starlightThemeRapide from "starlight-theme-rapide";
 
 import compressor from "astro-compressor";
 
+const GA_ID = "G-FN0MY3FD5G";
+
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare({
@@ -30,6 +32,23 @@ export default defineConfig({
             crossOrigin: "anonymous",
             href: "https://unpkg.com/pretendard@1.3.9/dist/web/static/pretendard-dynamic-subset.css",
           },
+        },
+        {
+          tag: "script",
+          attrs: {
+            src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`,
+            async: true,
+          },
+        },
+        {
+          tag: "script",
+          content: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('js', new Date()); 
+            
+            gtag('config', '${GA_ID}');
+          `,
         },
       ],
       pagefind: false,
