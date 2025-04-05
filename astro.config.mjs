@@ -17,6 +17,7 @@ export default defineConfig({
       social: {
         github: "https://github.com/Taewan-P/recruit-holdings-kr-recruit-page",
       },
+      customCss: ["./src/styles/custom.css"],
       pagefind: false,
     }),
   ],
