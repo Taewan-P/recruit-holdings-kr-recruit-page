@@ -45,7 +45,8 @@
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;/Users/taewanpark/Library/pnpm/pnpm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/taewanpark/Documents/GitHub/recruit-holdings-kr-recruit-page/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -82,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1743788786651</updated>
-      <workItem from="1743788788232" duration="3418000" />
+      <workItem from="1743788788232" duration="4831000" />
     </task>
     <servers />
   </component>

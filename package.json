@@ -1,23 +1,26 @@
 {
-	"name": "recruit-holdings-kr-recruit-page",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"build": "astro build",
-		"preview": "astro build && wrangler pages dev",
-		"astro": "astro",
-		"deploy": "astro build && wrangler pages deploy",
-		"cf-typegen": "wrangler types"
-	},
-	"dependencies": {
-		"@astrojs/starlight": "^0.32.5",
-		"@astrojs/cloudflare": "^12.4.0",
-		"astro": "^5.6.1",
-		"sharp": "^0.32.5"
-	},
-	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250404.0",
-		"wrangler": "^4.7.1"
-	}
+  "name": "recruit-holdings-kr-recruit-page",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro build && wrangler pages dev",
+    "astro": "astro",
+    "deploy": "astro build && wrangler pages deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.4.0",
+    "@astrojs/starlight": "^0.32.5",
+    "astro": "^5.6.1",
+    "sharp": "^0.34.0",
+    "starlight-theme-rapide": "^0.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250404.0",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1",
+    "wrangler": "^4.7.1"
+  }
 }

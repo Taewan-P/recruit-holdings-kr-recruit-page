@@ -1,0 +1,9 @@
+# Lock files
+pnpm-lock.yaml
+
+# Wrangler setting file
+wrangler.jsonc
+
+# VSCode files
+.vscode/
+
