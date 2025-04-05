@@ -3,6 +3,8 @@ import starlight from "@astrojs/starlight";
 import cloudflare from "@astrojs/cloudflare";
 import starlightThemeRapide from "starlight-theme-rapide";
 
+import compressor from "astro-compressor";
+
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare({
@@ -20,5 +22,6 @@ export default defineConfig({
       customCss: ["./src/styles/custom.css"],
       pagefind: false,
     }),
+    compressor(),
   ],
 });

@@ -17,6 +17,9 @@ importers:
       astro:
         specifier: ^5.6.1
         version: 5.6.1(rollup@4.39.0)(typescript@5.8.2)
+      astro-compressor:
+        specifier: ^1.0.0
+        version: 1.0.0
       sharp:
         specifier: ^0.34.0
         version: 0.34.0
@@ -978,6 +981,9 @@ packages:
   astring@1.9.0:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
+
+  astro-compressor@1.0.0:
+    resolution: {integrity: sha512-MNGRmjIsb73BIJivbU/HnTbPu5CEFvXp1NCev0bpsuK/cp4cCPX6C1omUPXzw2oQbtKv0phTTTtEk+h20SrF1Q==}
 
   astro-expressive-code@0.40.2:
     resolution: {integrity: sha512-yJMQId0yXSAbW9I6yqvJ3FcjKzJ8zRL7elbJbllkv1ZJPlsI0NI83Pxn1YL1IapEM347EvOOkSW2GL+2+NO61w==}
@@ -3001,6 +3007,8 @@ snapshots:
       printable-characters: 1.0.42
 
   astring@1.9.0: {}
+
+  astro-compressor@1.0.0: {}
 
   astro-expressive-code@0.40.2(astro@5.6.1(rollup@4.39.0)(typescript@5.8.2)):
     dependencies:
