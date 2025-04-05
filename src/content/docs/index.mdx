@@ -1,11 +1,34 @@
 ---
-title: "[신입] 일본 대기업 시가총액 120조 리쿠르트 채용 공고"
+title: "[신입] 일본 대기업 시가총액 120조 리쿠르트 홀딩스 채용 공고"
 template: doc
 ---
 
-import { Card, CardGrid } from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+import { Aside, Card, CardGrid, Steps } from "@astrojs/starlight/components";
+import kabegamiImage from "../../assets/2024_4_kabegami.jpg";
 
 ## 📢 채용 특징
+
+<br />
+
+<CardGrid stagger>
+  <Card title="26년 4월, 10월 입사, 데이터 직무" icon="document">
+    내정 시 2026년 4월 또는 10월에 입사하게 됩니다. 이번에 열린 직무는 데이터
+    스페셜리스트 직무입니다.
+  </Card>
+  <Card title="일본어 무관 전형" icon="translate">
+    일본어가 부족하더라도 상관 없습니다! 면접때 희망 시 통역사 동반 면접이
+    가능합니다!
+  </Card>
+  <Card title="서울 오프라인 1차 면접" icon="pen">
+    서류 전형 통과 시 서울에서 오프라인으로 1차 면접을 진행합니다!
+  </Card>
+  <Card title="연간 휴일 145일, 자유 재택 근무" icon="star">
+    일본 회사 평균 120일보다 휴일이 훨씬 많고, 재택 횟수 제한이 없습니다!
+  </Card>
+</CardGrid>
+
+<Image src={kabegamiImage} alt="리크루트 문구 홍보 이미지" />
 
 - **신입 개발자 포지션**
 - 일본 내 **시가총액 8위**, 120조원(네이버의 4배, 카카오의 6배), (**소프트뱅크 13위**) 📊
@@ -15,23 +38,8 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 - 휴일 : 연간 실질휴무일수 145일 🗓️
 - 교통비 지원 🚇
 - 25년 4월 입사 전형 📅
+- KOREC을 통해 합격한 내정자 다수 있음!
 - 24년 10월 2일(수) 지원 마감
-
-## **🌐** 대표서비스
-
-### **Indeed (월평균 약 3억 명의 사용자)**
-
-Indeed는 여러 해에 걸쳐 월간 활성 사용자 수가 2억 명에서 3억 명 사이를 기록해왔습니다. 이는 Indeed가 직접 발표한 자료나 업계 보고서를 통해 확인할 수 있는 수치입니다. 최근의 공식 통계에 따르면, Indeed의 월간 활성 사용자는 약 3억 명에 이릅니다.
-
-### **Glassdoor (월평균 약 5천만 명의 사용자)**
-
-Glassdoor의 월간 사용자 수는 대략 5천만 명으로 보고되고 있습니다. 이 수치는 Glassdoor가 공개한 사용자 통계나 업계 분석 보고서에서 제공되는 데이터입니다.
-
-안녕하세요. 일본 시가총액 8위(오늘 기준)의 대기업인 "주식회사 리크루트"에서 데이터 엔지니어 인재 모집이 KOREC 온라인에서 8월 말부터 시작됩니다!
-
-리쿠르트 홀딩스(Recruit Holdings)는 일본을 기반으로 한 글로벌 인력 솔루션 및 서비스 제공 회사로, 다양한 분야에서 서비스를 운영하고 있습니다. 대표적인 서비스로는 다음과 같습니다:
-
-통계 출처 : [https://10xhire.io/indeed-revenue-and-usage-statistics/](https://10xhire.io/indeed-revenue-and-usage-statistics/)
 
 ## 📌 모집 포지션
 
@@ -39,18 +47,49 @@ Glassdoor의 월간 사용자 수는 대략 5천만 명으로 보고되고 있�
 - 데이터 엔지니어
 - 머신러닝 엔지니어
 - 애널리틱스 엔지니어
-- **'데이터 사이언티스트' 포지션은 KOREC을 통해 합격한 내정자 有!**
 
-## ❗주의사항
+## 전형절차
 
-리쿠르트 기업 홈페이지에서도 지원이 가능하지만 이를 통해서 지원하게 된다면 일본 현지 지원자들과 같은 프로세스로 채용이 진행됩니다!
+<Steps>
 
-Korec 홈페이지를 통해서 지원해주시면 한국인을 채용한다는 가정하에 채용 과정이 진행되기 때문에, **오프라인 면접도 한국**에서 보실 수 있습니다!
-원래라면 임원분들은 최종면접에서 만나게 되지만 한국 채용에 큰 관심을 가지고 계셔서 직접 오셔서 1차면접을 진행할 예정입니다! Korec을 통해서 지원해주시면 **일본어 실력이 부족해도 직접 통역사가 붙어서 면접이 진행**되므로 한국분들이라면 꼭 Korec 홈페이지를 통해서 지원해주세요!
+    1. **KOREC 서류 접수** ➡️ 2025/05/01 (목) ~ 2025/06/12 (목) 23:59분
+
+        KOREC을 통해 서류접수를 하면, KOREC 메신저로 리크루트 사의 스킬 · ES 링크를 보내드립니다.
+        <Aside type="caution" title="주의사항">
+            리쿠르트 기업 홈페이지에서도 지원이 가능하지만 기업 홈페이지에서 지원하게 된다면 일본 현지 지원자들과 같은 프로세스로 채용이 진행됩니다!
+
+            KOREC 홈페이지를 통해서 지원해주시면 한국인을 채용한다는 가정하에 채용 과정이 진행되기 때문에, **오프라인 면접도 한국**에서 보실 수 있습니다!
+            원래라면 임원분들은 최종면접에서 만나게 되지만 한국 채용에 큰 관심을 가지고 계셔서 직접 오셔서 1차면접을 진행할 예정입니다! KOREC을 통해서 지원해주시면 **일본어 실력이 부족해도 직접 통역사가 붙어서 면접이 진행**되므로 한국분들이라면 꼭 KOREC 홈페이지를 통해서 지원해주세요!
+
+        </Aside>
+
+    2. **리크루트 스킬 · ES 링크 작성** ➡️ 2025/06/15 (일) 23:59분
+
+    3. **서류 발표** ➡️ 2025/06/16 (월) ~ 2025/06/18 (수)
+
+        합격자는 개별 연락드립니다.
+
+    4. **1차 면접** ➡️ 2025/06/28 (토) ~ 2025/06/29 (일)
+
+        서울에서 오프라인으로 진행 예정입니다.
+
+    5. **스킬 테스트**
+
+        온라인으로 진행되는 과제전형입니다.
+
+    6. **2 ~ 3회 면접**
+
+        이후 온라인으로 진행되는 면접입니다.
+
+    7. **내정**
+
+        입사 시기 등 면담을 진행합니다.
+
+</Steps>
 
 ## 🔍 온라인 채용 설명회 개최
 
-리쿠르트 홀딩스 전형을 대비해서 **어떻게 해야 합격률이 높아질 수 있는지** 온라인으로 설명회를 개최합니다. 아래와 같은 일정으로 진행할 예정이오니 혹시 시간이 되신다면 아래의 Google From으로 신청해주시면 감사하겠습니다.
+리쿠르트 홀딩스 전형을 대비해서 **어떻게 해야 합격률이 높아질 수 있는지** 온라인으로 설명회를 개최합니다. 아래와 같은 일정으로 진행할 예정이오니 혹시 시간이 되신다면 아래의 Google Form으로 신청해주시면 감사하겠습니다.
 
 ・9/23(월)19:00~19:30
 
@@ -102,18 +141,3 @@ Korec 홈페이지를 통해서 지원해주시면 한국인을 채용한다는 
 🏢 KOREC 서비스 소개
 
 [韓国人採用ならKOREC │ 新卒・中途採用イベントの実施や人材紹介](https://bwell-i.com/korec/)
-
-<CardGrid stagger>
-  <Card title="Update content" icon="pencil">
-    Edit `src/content/docs/index.mdx` to see this page change.
-  </Card>
-  <Card title="Add new content" icon="add-document">
-    Add Markdown or MDX files to `src/content/docs` to create new pages.
-  </Card>
-  <Card title="Configure your site" icon="setting">
-    Edit your `sidebar` and other config in `astro.config.mjs`.
-  </Card>
-  <Card title="Read the docs" icon="open-book">
-    Learn more in [the Starlight Docs](https://starlight.astro.build/).
-  </Card>
-</CardGrid>
