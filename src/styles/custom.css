@@ -1,6 +1,3 @@
-/*@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/split/WantedSans.min.css");*/
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable-dynamic-subset.min.css");
-
 :root {
   --sl-font:
     "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
