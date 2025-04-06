@@ -13,10 +13,10 @@ import {
   LinkCard,
   Steps,
 } from "@astrojs/starlight/components";
-import { YouTube } from "astro-embed";
+import { LinkPreview } from "astro-embed";
 import bannerImage from "../../assets/2024_4_kabegami.webp";
 
-<Image src={bannerImage} alt="리크루트 문구 홍보 이미지" />
+<Image src={bannerImage} alt="리크루트 문구 홍보 이미지" loading="eager" />
 
 ## 📢 채용 특징
 
@@ -63,7 +63,7 @@ import bannerImage from "../../assets/2024_4_kabegami.webp";
 
 - 26년 2월까지 학/석사 학위를 취득할 수 있고 (기졸업자 포함) 26년 4월 또는 10월에 입사 가능한 분
 - 26년 입사 시점에 만 30세 미만인 분
-- 남성의 경우 군필 또는 면제자로 해외여행에 결격사유가 없는 분
+- 해외여행에 결격사유가 없고, 남성의 경우 군필 또는 면제자인 분
 
 ## 🎯 이런 분을 찾습니다!
 
@@ -85,11 +85,12 @@ import bannerImage from "../../assets/2024_4_kabegami.webp";
             리쿠르트 기업 홈페이지에서도 지원이 가능하지만 기업 홈페이지에서 지원하게 된다면 일본 현지 지원자들과 같은 프로세스로 채용이 진행됩니다!
 
             KOREC 홈페이지를 통해서 지원해주시면 한국인을 채용한다는 가정하에 채용 과정이 진행되기 때문에, **오프라인 면접도 한국**에서 보실 수 있습니다!
-            원래라면 임원분들은 최종면접에서 만나게 되지만 한국 채용에 큰 관심을 가지고 계셔서 직접 오셔서 1차면접을 진행할 예정입니다! KOREC을 통해서 지원해주시면 **일본어 실력이 부족해도 직접 통역사가 붙어서 면접이 진행**되므로 한국분들이라면 꼭 KOREC 홈페이지를 통해서 지원해주세요!
+            원래라면 임원분들은 최종면접에서 만나게 되지만 한국 채용에 큰 관심을 가지고 계셔서 직접 오셔서 1차면접을 진행할 예정입니다! KOREC을 통해서 지원해주시면 **일본어 실력이 부족해도 직접 통역사가
+            붙어서 면접이 진행**되므로 한국분들이라면 꼭 KOREC 홈페이지를 통해서 지원해주세요!
 
         </Aside>
 
-    2. **리크루트 스킬 · ES 링크 작성** ➡️ ~ 2025/06/15 (일) 23:59분
+    2. **리크루트 스킬 · ES 링크 작성** ➡️ ~ 2025/06/15 (일) 23:59분까지
 
     3. **서류 발표** ➡️ 2025/06/16 (월) ~ 2025/06/18 (수)
 
@@ -113,32 +114,39 @@ import bannerImage from "../../assets/2024_4_kabegami.webp";
 
 </Steps>
 
-### 구체적인 급여 \* 복지
+## 🏢 일하는 환경, 복리 후생
+
+더 자세한 내용은 아래 링크에서 확인하세요!
+
+<Card title="働く環境、福利厚生">
+  <LinkPreview id="https://www.recruit.co.jp/employment/workplace/" hideMedia />
+</Card>
 
 [급여 \* 복지](/pages/salary-welfare/)
 
 ## 📎 관련 링크
 
-👇 KOREC 전형을 통해 합격자와의 카카오톡 오픈채팅 (채용과정에 대해서 궁금한 점이 있다면 무엇이든지 물어봐주세요!)
+<CardGrid>
+  <LinkCard
+    title="내정자와의 QnA"
+    description="해당 KOREC 전형으로 2025년 10월 입사 예정인 내정자에게 전형에 관해 무엇이든 물어보세요."
+    href="https://open.kakao.com/me/korec_x_recruit_qna"
+  />
+  <LinkCard
+    title="리크루트 데이터 기술 블로그"
+    description="데이터 직군이 근무하게 될 데이터 추진실에서 따로 운영하는 기술 블로그입니다."
+    href="https://blog.recruit.co.jp/data/"
+  />
+  <LinkCard
+    title="리크루트 홈페이지"
+    description="주식회사 리크루트 홈페이지입니다."
+    href="https://www.recruit.co.jp/"
+  />
+  <LinkCard
+    title="KOREC 내 리크루트 소개"
+    description="코렉 네이버카페에서 리크루트 회사에 대해 소개, 분석한 내용입니다."
+    href="https://cafe.naver.com/koreccafe/6834"
+  />
+</CardGrid>
 
-[KOREC × 리크루트 (リクルート) 내정자와의 Q&A](https://open.kakao.com/o/sBFWn8Eg)
-
-👇 리크루트 데이터 기술 블로그
-
-[Recruit Data Blog](https://blog.recruit.co.jp/data/)
-
-👇 리크루트 홈페이지
-
-[会社概要 | 株式会社リクルート](https://www.recruit.co.jp/company/profile/)
-
-👇사내 문화 동영상
-
-<YouTube
-  id="_jALOWIfYpI"
-  title="[리크루트 신졸채용] 컨셉 무비 『PLAY RECRUIT, PLAY OPPORTUNITIES.』"
-  posterQuality="max"
-/>
-
-👇 KOREC 내 리크루트 소개
-
-[[4월] 일본 최대 점유율 NO.1 정보산업 기업🥇 《주식회사 리크루트》 #데이터\_스페셜리스트 #기술직 #탄력근무제](https://cafe.naver.com/koreccafe/6834)
+## ✅ 지원하기
