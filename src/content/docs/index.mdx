@@ -6,10 +6,17 @@ next: false
 ---
 
 import { Image } from "astro:assets";
-import { Aside, Card, CardGrid, Steps } from "@astrojs/starlight/components";
-import kabegamiImage from "../../assets/2024_4_kabegami.webp";
+import {
+  Aside,
+  Card,
+  CardGrid,
+  LinkCard,
+  Steps,
+} from "@astrojs/starlight/components";
+import { YouTube } from "astro-embed";
+import bannerImage from "../../assets/2024_4_kabegami.webp";
 
-<Image src={kabegamiImage} alt="리크루트 문구 홍보 이미지" />
+<Image src={bannerImage} alt="리크루트 문구 홍보 이미지" />
 
 ## 📢 채용 특징
 
@@ -33,24 +40,41 @@ import kabegamiImage from "../../assets/2024_4_kabegami.webp";
 </CardGrid>
 
 - **신입 개발자 포지션**
-- 일본 내 **시가총액 8위**, 120조원(네이버의 4배, 카카오의 6배), (**소프트뱅크 13위**) 📊
-- 연봉 470만엔 (실적에 따라 470만엔 이상 연봉 가능) 💰
-- **일본어 전혀 말하지 못해도 OK (통역사 동반 면접)** 🗣️
-- 일본 거주 🏠
-- 휴일 : 연간 실질휴무일수 145일 🗓️
-- 교통비 지원 🚇
-- 25년 4월 입사 전형 📅
+- 일본 내 **시가총액 10위**, 120조원 (네이버의 4배, 카카오의 6배), (**소프트뱅크 16위**) 📊
+- 일본 거주 전제 채용 🏠
+- 근무지 도쿄역/마루노우치
 - KOREC을 통해 합격한 내정자 다수 있음!
-- 24년 10월 2일(수) 지원 마감
+- 1년차 연봉 470만엔+ (실적, 능력에 따라 470만엔 이상 가능) 💰
 
-## 📌 모집 포지션
+## 💼 모집 포지션
 
 - 데이터 사이언티스트
 - 데이터 엔지니어
 - 머신러닝 엔지니어
 - 애널리틱스 엔지니어
 
-## 전형절차
+<LinkCard
+  title="모집 포지션 상세 설명"
+  description="각 포지션별 세부 업무 내용, 키워드를 소개합니다."
+  href="/pages/position-details/"
+/>
+
+## 🧑‍💻 지원 자격
+
+- 26년 2월까지 학/석사 학위를 취득할 수 있고 (기졸업자 포함) 26년 4월 또는 10월에 입사 가능한 분
+- 26년 입사 시점에 만 30세 미만인 분
+- 남성의 경우 군필 또는 면제자로 해외여행에 결격사유가 없는 분
+
+## 🎯 이런 분을 찾습니다!
+
+아래 요건 중 어느 하나라도 해당되는 분:
+
+- 개발 경험이 있고, 해커톤이나 국내외 대회에서 수상 경력이 있는 사람
+- 논문, 캐글, 인턴십 등에서 우수한 실적 등이 있는 사람
+- 특허가 있는 사람
+- 일본어가 가능한 사람
+
+## 🚀 전형절차
 
 <Steps>
 
@@ -89,27 +113,6 @@ import kabegamiImage from "../../assets/2024_4_kabegami.webp";
 
 </Steps>
 
-## 🔍 온라인 채용 설명회 개최
-
-리쿠르트 홀딩스 전형을 대비해서 **어떻게 해야 합격률이 높아질 수 있는지** 온라인으로 설명회를 개최합니다. 아래와 같은 일정으로 진행할 예정이오니 혹시 시간이 되신다면 아래의 Google Form으로 신청해주시면 감사하겠습니다.
-
-・9/23(월)19:00~19:30
-
-・9/26(목)19:00~19:30
-
-[리쿠르트 홀딩스 온라인 설명회](https://forms.gle/dZ8Pr7VdMsFqFcKC9)
-
-## 📌 채용 지원 링크
-
-본 구인은 8월 26일 (월)부터 OPEN 됩니다！ KOREC을 통해 지원하시면, 서류전형 합격자는 서울에서 면접을 진행할 예정입니다. 면접 일정은 추후 공지드리겠습니다.
-많은 관심 부탁드립니다. 감사합니다.
-
-[KOREC | 일본취업 성공율 No.1 우수한 한국인재의 일본취업을 응원합니다.](https://app.korec.jp/jobs/mNrsZZtQLQ?reference_action=use_search?reference_action=top_banner_click)
-
-### 더 자세한 포지션, 회사 설명
-
-[더 자세한 내용은 클릭!](/pages/position-details/)
-
 ### 구체적인 급여 \* 복지
 
 [급여 \* 복지](/pages/salary-welfare/)
@@ -120,7 +123,7 @@ import kabegamiImage from "../../assets/2024_4_kabegami.webp";
 
 [KOREC × 리크루트 (リクルート) 내정자와의 Q&A](https://open.kakao.com/o/sBFWn8Eg)
 
-👇 리크루트 기술 블로그
+👇 리크루트 데이터 기술 블로그
 
 [Recruit Data Blog](https://blog.recruit.co.jp/data/)
 
@@ -130,16 +133,12 @@ import kabegamiImage from "../../assets/2024_4_kabegami.webp";
 
 👇사내 문화 동영상
 
-[【リクルート新卒採用】コンセプトムービー『PLAY RECRUIT, PLAY OPPORTUNITIES.』(Full Ver.)](https://www.youtube.com/watch?v=_jALOWIfYpI)
+<YouTube
+  id="_jALOWIfYpI"
+  title="[리크루트 신졸채용] 컨셉 무비 『PLAY RECRUIT, PLAY OPPORTUNITIES.』"
+  posterQuality="max"
+/>
 
 👇 KOREC 내 리크루트 소개
 
 [[4월] 일본 최대 점유율 NO.1 정보산업 기업🥇 《주식회사 리크루트》 #데이터\_스페셜리스트 #기술직 #탄력근무제](https://cafe.naver.com/koreccafe/6834)
-
-🏢 KOREC 사이트
-
-[KOREC | 일본취업 성공율 No.1 우수한 한국인재의 일본취업을 응원합니다.](https://app.korec.jp/)
-
-🏢 KOREC 서비스 소개
-
-[韓国人採用ならKOREC │ 新卒・中途採用イベントの実施や人材紹介](https://bwell-i.com/korec/)
