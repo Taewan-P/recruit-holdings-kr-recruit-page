@@ -1,0 +1,12 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+import { getOpenGraphUrl } from "../util/getOpenGraphUrl";
+
+const ogImageUrl = getOpenGraphUrl(Astro.url.pathname)
+const imageSrc = ogImageUrl ?? '/index.webp';
+const canonicalImageSrc = new URL(imageSrc, Astro.site);
+---
+
+<Default {...Astro.props}><slot/></Default>
+<meta property="og:image" content={canonicalImageSrc} />
+<meta name="twitter:image" content={canonicalImageSrc} />

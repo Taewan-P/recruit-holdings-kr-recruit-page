@@ -39,10 +39,26 @@ export const { getStaticPaths, GET } = OGImageRoute({
     description: data.description,
     logo: {
       path: "./src/pages/open-graph/_images/recruit_korec.png",
-      size: [600],
+      size: [800],
     },
+    font: {
+      title: {
+        lineHeight: 1.2,
+        families: ["Pretendard"],
+        weight: "Bold",
+        color: [0, 0, 0],
+      },
+      description: {
+        families: ["Pretendard"],
+        color: [0, 0, 0],
+      },
+    },
+    fonts: [
+      "./src/pages/open-graph/_fonts/Pretendard-Regular.otf",
+      "./src/pages/open-graph/_fonts/Pretendard-Bold.otf",
+    ],
     border: { width: 32, side: "inline-start" },
-    padding: 80,
+    padding: 60,
     bgGradient: [[255, 255, 255]],
   }),
 });

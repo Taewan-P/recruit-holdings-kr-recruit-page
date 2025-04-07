@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import cloudflare from "@astrojs/cloudflare";
 import starlightThemeRapide from "starlight-theme-rapide";
 
 import compressor from "astro-compressor";
@@ -19,6 +18,9 @@ export default defineConfig({
         github: "https://github.com/Taewan-P/recruit-holdings-kr-recruit-page",
       },
       customCss: ["./src/styles/custom.css"],
+      components: {
+        Head: "./src/components/Head.astro",
+      },
       head: [
         {
           tag: "link",
