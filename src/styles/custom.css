@@ -5,3 +5,47 @@
     "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
 }
+
+nav {
+  inset-inline-start: 0;
+}
+
+@media (max-width: 50rem) {
+  body:not([data-mobile-menu-expanded]) .sidebar-pane {
+    display: none;
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 50rem) and (max-width: 72rem) {
+  :root {
+    --tablet-navbar-inset-inline-start: 0px;
+  }
+
+  .main-frame {
+    padding-inline-start: 0;
+  }
+
+  .main-pane {
+    inset-inline-start: var(--sl-sidebar-width);
+  }
+
+  .sidebar-pane {
+    display: none;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .sl-container {
+    max-width: none;
+  }
+}
+
+@media (min-width: 72rem) {
+  .sidebar-pane {
+    display: none;
+    width: 0;
+    overflow: hidden;
+  }
+}
