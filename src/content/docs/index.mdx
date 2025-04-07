@@ -14,6 +14,7 @@ import {
   Steps,
 } from "@astrojs/starlight/components";
 import { LinkPreview } from "astro-embed";
+import ApplyButton from "../../components/ApplyButton.astro";
 import bannerImage from "../../assets/2024_4_kabegami.webp";
 
 <Image src={bannerImage} alt="리크루트 문구 홍보 이미지" loading="eager" />
@@ -150,3 +151,16 @@ import bannerImage from "../../assets/2024_4_kabegami.webp";
 </CardGrid>
 
 ## ✅ 지원하기
+
+아래 지원하기 버튼을 통해 지원하실 수 있습니다. 지원 시 KOREC 회원가입이 필요합니다.
+
+<br />
+
+<p align="center">
+  <ApplyButton
+    title="2026 신입 지원하기"
+    description="KOREC 사이트로 이동합니다."
+    href="https://youtu.be/ubn5o9e_7GA"
+    alt="지원하기 버튼"
+  />
+</p>
