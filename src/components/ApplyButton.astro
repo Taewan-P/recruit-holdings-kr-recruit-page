@@ -1,0 +1,121 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  href?: string;
+  alt?: string;
+  target?: '_blank' | '_self' | '_parent' | '_top';
+  rel?: string;
+}
+
+const {
+  title = 'Main Action',
+  description,
+  href = '#',
+  alt = title,
+  target,
+  rel,
+} = Astro.props;
+
+// Determine rel attribute automatically for target="_blank" for security
+const defaultRel = target === '_blank' ? 'noopener noreferrer' : undefined;
+const finalRel = rel ?? defaultRel;
+---
+
+<a href={href}
+   class="astro-button"
+   title={alt}
+   style={
+     {
+       color: 'black'
+     }
+   }
+   target={target}
+   rel={finalRel}
+>
+    <span class="button-text-content">
+    <span class="button-title">{title}</span>
+      {description && (
+              <span class="button-description">{description}</span>
+      )}
+  </span>
+</a>
+
+<style>
+    .astro-button {
+        /* Layout & Sizing */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75em;
+        padding: 1.2em 2.2em;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        /* Appearance */
+        background: radial-gradient(circle at 30% 40%, #ffc1cc, transparent 20%),
+        radial-gradient(circle at 80% 30%, #c6b7ff, transparent 20%),
+        radial-gradient(circle at 50% 70%, #b7f5b7, transparent 20%),
+        radial-gradient(circle at 30% 90%, #fff08a, transparent 20%),
+        linear-gradient(135deg, #ffc1cc, #d1e0ff, #ffd6e8, #d0f0ff, #ffc1cc) repeat-x, repeat-y;
+        background-blend-mode: screen;
+        background-size: cover;
+
+        border-radius: 999px;
+        font-family: inherit;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+
+        /* Smooth Transitions */
+        transition: transform 0.1s ease-out,
+        box-shadow 0.1s ease-out,
+        background-color 0.2s ease;
+    }
+
+    .button-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.3;
+    }
+
+    .button-title {
+        font-size: 1.6rem;
+    }
+
+    .button-description {
+        font-size: 1rem;
+        font-weight: normal;
+        opacity: 0.85;
+        margin-top: 0.2em;
+    }
+
+    .astro-button:hover {
+        background-color: #1dab1d;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-1px);
+    }
+
+    .astro-button:active {
+        background-color: #1dab1d;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        transform: translateY(2px);
+        transition-duration: 0.05s;
+    }
+
+    :root[data-theme="dark"] .astro-button {
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
+    }
+
+    :root[data-theme="dark"] .astro-button:hover {
+        box-shadow: 0 6px 12px rgba(255, 255, 255, 0.8);
+    }
+
+    :root[data-theme="dark"] .astro-button:active {
+        box-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+</style>
