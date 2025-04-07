@@ -9,12 +9,6 @@ const GA_ID = "G-FN0MY3FD5G";
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: cloudflare({
-    imageService: "passthrough",
-    platformProxy: {
-      enabled: true,
-    },
-  }),
   site: "https://recruit-holdings-korec.pages.dev",
   integrations: [
     starlight({

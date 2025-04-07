@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@astrojs/cloudflare':
-        specifier: ^12.4.0
-        version: 12.4.0(@types/node@18.19.86)(astro@5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2))
       '@astrojs/starlight':
         specifier: ^0.32.5
         version: 0.32.5(astro@5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2))
@@ -87,11 +84,6 @@ packages:
     peerDependencies:
       astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta || ^5.0.0-beta
 
-  '@astrojs/cloudflare@12.4.0':
-    resolution: {integrity: sha512-k5cZd/UBIlF4zAAou/v4ucbqQFP+4IuuRLXcy3nDe8Zty3lAhGHDBOoFSPKSe6GMc+Ou1J1/HHLhRttpdYw3pQ==}
-    peerDependencies:
-      astro: ^5.0.0
-
   '@astrojs/compiler@2.11.0':
     resolution: {integrity: sha512-zZOO7i+JhojO8qmlyR/URui6LyfHJY6m+L9nwyX5GiKD78YoRaZ5tzz6X0fkl+5bD3uwlDHayf6Oe8Fu36RKNg==}
 
@@ -122,9 +114,6 @@ packages:
   '@astrojs/telemetry@3.2.0':
     resolution: {integrity: sha512-wxhSKRfKugLwLlr4OFfcqovk+LIFtKwLyGPqMsv+9/ibqqnW3Gv7tBhtKEb0gAyUAC4G9BTVQeQahqnQAhd6IQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
-
-  '@astrojs/underscore-redirects@0.6.0':
-    resolution: {integrity: sha512-dnJgFpaM955IFNIkEEmMaaIdWXRdeZs1ID6mlGBqdjh6NiCXfKmOdq7L4fd9Dd/tr18fkLrOJ25IUJSxRAEhjQ==}
 
   '@atproto/api@0.13.35':
     resolution: {integrity: sha512-vsEfBj0C333TLjDppvTdTE0IdKlXuljKSveAeI4PPx/l6eUKNnDTsYxvILtXUVzwUlTDmSRqy5O4Ryh78n1b7g==}
@@ -2424,34 +2413,6 @@ snapshots:
       astro: 5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2)
       lite-youtube-embed: 0.3.3
 
-  '@astrojs/cloudflare@12.4.0(@types/node@18.19.86)(astro@5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2))':
-    dependencies:
-      '@astrojs/internal-helpers': 0.6.1
-      '@astrojs/underscore-redirects': 0.6.0
-      '@cloudflare/workers-types': 4.20250404.0
-      astro: 5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2)
-      esbuild: 0.25.2
-      estree-walker: 3.0.3
-      magic-string: 0.30.17
-      miniflare: 4.20250321.2
-      tinyglobby: 0.2.12
-      vite: 6.2.5(@types/node@18.19.86)
-      wrangler: 4.7.1(@cloudflare/workers-types@4.20250404.0)
-    transitivePeerDependencies:
-      - '@types/node'
-      - bufferutil
-      - jiti
-      - less
-      - lightningcss
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - terser
-      - tsx
-      - utf-8-validate
-      - yaml
-
   '@astrojs/compiler@2.11.0': {}
 
   '@astrojs/internal-helpers@0.6.1': {}
@@ -2553,8 +2514,6 @@ snapshots:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
-
-  '@astrojs/underscore-redirects@0.6.0': {}
 
   '@atproto/api@0.13.35':
     dependencies:
