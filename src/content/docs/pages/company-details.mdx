@@ -5,4 +5,18 @@ prev: false
 next: false
 ---
 
+import { Picture } from "astro:assets";
+import dataDptOrgChart from "../../../assets/data_dpt_ko.webp";
+
+## 회사 정보
+
 asdf
+
+## 데이터 추진실
+
+<Picture
+  src={dataDptOrgChart}
+  formats={["avif", "webp"]}
+  fallbackFormat="webp"
+  alt="데이터 추진실 조직도"
+/>
