@@ -25,7 +25,7 @@ importers:
         version: 0.9.0(astro@5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2))
       astro-og-canvas:
         specifier: ^0.7.0
-        version: 0.7.0(astro@5.6.1(rollup@4.39.0)(typescript@5.8.2))
+        version: 0.7.0(astro@5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2))
       canvaskit-wasm:
         specifier: ^0.40.0
         version: 0.40.0
@@ -3277,14 +3277,14 @@ snapshots:
       astro: 5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2)
       rehype-expressive-code: 0.40.2
 
-  astro-og-canvas@0.7.0(astro@5.6.1(rollup@4.39.0)(typescript@5.8.2)):
+  astro-og-canvas@0.7.0(astro@5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2)):
     dependencies:
-      astro: 5.6.1(rollup@4.39.0)(typescript@5.8.2)
+      astro: 5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2)
       canvaskit-wasm: 0.39.1
       deterministic-object-hash: 2.0.2
       entities: 4.5.0
 
-  astro@5.6.1(rollup@4.39.0)(typescript@5.8.2):
+  astro@5.6.1(@types/node@18.19.86)(rollup@4.39.0)(typescript@5.8.2):
     dependencies:
       '@astrojs/compiler': 2.11.0
       '@astrojs/internal-helpers': 0.6.1
