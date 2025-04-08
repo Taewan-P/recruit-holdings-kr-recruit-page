@@ -4,4 +4,36 @@
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
     "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
+  --sl-content-width: 50rem;
+}
+
+.main-frame {
+  padding-inline-start: 0;
+}
+
+mobile-starlight-toc nav {
+  inset-inline-start: 0;
+}
+
+@media (min-width: 50rem) {
+  .sidebar-pane {
+    display: none;
+  }
+}
+
+@media (min-width: 50rem) and (max-width: 72rem) {
+  .content-panel > .sl-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 72rem) {
+  .main-pane {
+    width: calc(
+      var(--sl-content-width) +
+        (100% - var(--sl-content-width) + var(--sl-sidebar-width) * 2.5) / 2
+        /* Magic Number 2.5 */
+    ) !important;
+  }
 }
