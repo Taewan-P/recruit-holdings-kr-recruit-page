@@ -5,7 +5,7 @@ prev: false
 next: false
 ---
 
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import {
   Aside,
   Card,
@@ -17,7 +17,13 @@ import { LinkPreview } from "astro-embed";
 import ApplyButton from "../../components/ApplyButton.astro";
 import bannerImage from "../../assets/2024_4_kabegami.webp";
 
-<Image src={bannerImage} alt="리크루트 문구 홍보 이미지" loading="eager" />
+<Picture
+  src={bannerImage}
+  formats={["avif", "webp"]}
+  fallbackFormat="webp"
+  alt="리크루트 문구 홍보 이미지"
+  loading="eager"
+/>
 
 ## 📢 채용 특징
 
