@@ -1,6 +1,6 @@
 ---
-title: 리크루트 회사 상세정보
-description: 리크루트 회사, 전개하는 사업, 비즈니스 모델, 데이터 추진실 소개 페이지입니다.
+title: 회사 상세정보
+description: 리크루트 회사, 전개하는 사업, 가치관・문화, 그리고 데이터 추진실 소개 페이지입니다.
 prev: false
 next: false
 ---
@@ -8,10 +8,51 @@ next: false
 import { YouTube } from "astro-embed";
 import { Picture } from "astro:assets";
 import dataDptOrgChart from "../../../assets/data_dpt_ko.webp";
+import businessList from "../../../assets/recruit_business.webp";
 
-## 회사 정보
+- 회사 이름: 주식회사 리크루트 (株式会社リクルート), 모기업 리크루트 홀딩스 (株式会社リクルートホールディングス)
+- 회사 소재지: 〒100-6640
+  도쿄도 지요다구 마루노우치 1-9-2 그랜트 쿄우 사우 타워
+- 직원 수: 14,192명(2025년 4월 1일 현재 / 아르바이트・파트 포함)
 
-asdf
+1960년 에조에 히로마사가 설립한 이 회사는 원래 대학 신문 구인광고 대행으로 회사를 시작하여 학생들을 대상으로 채용 서비스를 제공하는 데 주력했습니다.
+이후 수년에 걸쳐 크게 발전하여 현재는 업무의 세계를 변화시키는 글로벌 기술 기업으로 운영되고 있습니다.
+
+## 사업・서비스
+
+리크루트는 인재 관련 사업을 시작으로, 인생의 중요한 전환점이 되는 '라이프 이벤트' 영역과 일상 소비의 '라이프스타일' 영역으로 사업을 확장해 왔습니다.
+최근에는 업무・경영 지원(클라우드를 활용한 SaaS 솔루션)에도 주력하고 있으며, 다양한 업계에서 여러 서비스를 제공하고 있습니다.
+
+<Picture
+  src={businessList}
+  formats={["avif", "webp"]}
+  fallbackFormat="webp"
+  alt="리크루트 비즈니스 목록"
+  loading="eager"
+/>
+
+## 가치관, 문화
+
+> ### "Follow Your Heart"
+
+한 사람 한 사람이 자신에게 솔직하게, 스스로 결정하는, 자신다운 인생. 진정으로 소중한 것에 열중할 수 있을 때, 사람과 조직은 더 나은 미래를 만들어낼 수 있다고 믿습니다.
+리크루트는 한 번밖에 없는 자신의 인생을, 자신의 의사로 선택해, 자신답게 살 수 있는 세상을 목표로 하고 있습니다.
+
+### 소중히 여기는 가치관
+
+- **새로운 가치 창조 / Wow the World**: 전 세계가 깜짝 놀랄 미래의 새로운 표준을 만들고 싶다. 유희적인 마음을 잃지 않고, 상식에 의문을 제기하는 것부터 시작하면 된다.
+  가치 있는 실패로부터 배우고, 철저하게 고집하며, 끊임없이 변화하는 것을 즐기자.
+- **개인의 존중 / Bet on Passion**: 모든 것은 호기심에서 시작된다. 한 사람 한 사람의 호기심이 억제할 수 없는 열정을 낳고, 그 차이가 가치를 창조한다.
+  모든 위대한 업적은 개인의 색다른 아이디어와 데이터나 사실이 결합할 때 시작된다. 우리는 열정에 투자한다.
+- **사회에 공헌 / Prioritize Social Value**: 우리는 모든 기업 활동을 통해 지속 가능하고 풍요로운 사회에 공헌한다. 한 사람 한 사람이 당사자로서 사회의 부조리에 맞서고, 더 나은 미래를 향해 행동하자.
+
+<p align="center">
+  <YouTube
+    id="_jALOWIfYpI"
+    title="[리크루트 신졸채용] 컨셉 무비 『PLAY RECRUIT, PLAY OPPORTUNITIES.』"
+    posterQuality="max"
+  />
+</p>
 
 ## 데이터 추진실
 
@@ -20,10 +61,4 @@ asdf
   formats={["avif", "webp"]}
   fallbackFormat="webp"
   alt="데이터 추진실 조직도"
-/>
-
-<YouTube
-  id="_jALOWIfYpI"
-  title="[리크루트 신졸채용] 컨셉 무비 『PLAY RECRUIT, PLAY OPPORTUNITIES.』"
-  posterQuality="max"
 />
