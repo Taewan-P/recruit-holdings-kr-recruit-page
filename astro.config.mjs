@@ -4,8 +4,6 @@ import starlightThemeRapide from "starlight-theme-rapide";
 
 import compressor from "astro-compressor";
 
-const GA_ID = "G-FN0MY3FD5G";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://recruit-holdings-korec.pages.dev",
@@ -20,6 +18,7 @@ export default defineConfig({
       customCss: ["./src/styles/custom.css"],
       components: {
         Head: "./src/components/Head.astro",
+        SkipLink: "./src/components/SkipLink.astro",
       },
       head: [
         {
@@ -33,19 +32,12 @@ export default defineConfig({
         },
         {
           tag: "script",
-          attrs: {
-            src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`,
-            async: true,
-          },
-        },
-        {
-          tag: "script",
           content: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);} 
-            gtag('js', new Date()); 
-            
-            gtag('config', '${GA_ID}');
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P6VTBRLJ');
           `,
         },
       ],
