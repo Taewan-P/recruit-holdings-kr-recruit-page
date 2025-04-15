@@ -6,6 +6,7 @@ interface Props {
   alt?: string;
   target?: '_blank' | '_self' | '_parent' | '_top';
   rel?: string;
+  disabled?: boolean;
 }
 
 const {
@@ -15,23 +16,26 @@ const {
   alt = title,
   target,
   rel,
+  disabled = false,
 } = Astro.props;
 
 // Determine rel attribute automatically for target="_blank" for security
 const defaultRel = target === '_blank' ? 'noopener noreferrer' : undefined;
 const finalRel = rel ?? defaultRel;
+const ariaDisabled = disabled ? 'true' : undefined;
 ---
 
-<a href={href}
-   class="astro-button"
+<a href={!disabled ? href : "#-%EC%A7%80%EC%9B%90%ED%95%98%EA%B8%B0"}
+   class:list={["astro-button", {'disabled': disabled}]}
    title={alt}
    style={
      {
        color: 'black'
      }
    }
-   target={target}
-   rel={finalRel}
+   target={!disabled ? target : undefined}
+   rel={!disabled ? finalRel: undefined}
+   aria-disabled={ariaDisabled}
 >
     <span class="button-text-content">
     <span class="button-title">{title}</span>
@@ -105,6 +109,19 @@ const finalRel = rel ?? defaultRel;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         transform: translateY(2px);
         transition-duration: 0.05s;
+    }
+
+    .astro-button.disabled {
+        background: radial-gradient(circle at 30% 40%, #9e9e9e, transparent 20%),
+        radial-gradient(circle at 80% 30%, #8d8d8d, transparent 20%),
+        radial-gradient(circle at 50% 70%, #b0b0b0, transparent 20%),
+        radial-gradient(circle at 30% 90%, #bababa, transparent 20%),
+        linear-gradient(135deg, #9e9e9e, #acacac, #aeaeae, #b7b7b7, #9e9e9e) repeat-x, repeat-y;
+        box-shadow: none; /* Remove shadow */
+        pointer-events: none;
+        opacity: 0.7; /* Slightly faded */
+        transform: none;
+        text-decoration: none;
     }
 
     :root[data-theme="dark"] .astro-button {
