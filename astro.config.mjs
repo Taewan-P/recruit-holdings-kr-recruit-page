@@ -12,9 +12,13 @@ export default defineConfig({
       plugins: [starlightThemeRapide()],
       title: "리크루트 홀딩스 x KOREC 채용공고",
       defaultLocale: "ko",
-      social: {
-        github: "https://github.com/Taewan-P/recruit-holdings-kr-recruit-page",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/Taewan-P/recruit-holdings-kr-recruit-page",
+        },
+      ],
       customCss: ["./src/styles/custom.css"],
       components: {
         Head: "./src/components/Head.astro",
