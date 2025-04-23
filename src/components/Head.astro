@@ -5,8 +5,19 @@ import { getOpenGraphUrl } from "../util/getOpenGraphUrl";
 const ogImageUrl = getOpenGraphUrl(Astro.url.pathname)
 const imageSrc = ogImageUrl ?? '/open-graph/index.webp';
 const canonicalImageSrc = new URL(imageSrc, Astro.site);
+const { title }  = Astro.locals.starlightRoute.entry.data;
+
+const siteStructureData = {
+  "@context" : "https://schema.org",
+  "@type" : "WebSite",
+  "name" : title,
+  "alternateName": ["리크루트 홀딩스 X KOREC"],
+  "url" : Astro.url.toString()
+}
 ---
 
 <Default {...Astro.props}><slot/></Default>
 <meta property="og:image" content={canonicalImageSrc} />
 <meta name="twitter:image" content={canonicalImageSrc} />
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(siteStructureData)} />
