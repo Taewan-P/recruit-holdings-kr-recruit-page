@@ -44,6 +44,14 @@ export default defineConfig({
             })(window,document,'script','dataLayer','GTM-P6VTBRLJ');
           `,
         },
+        {
+          tag: "link",
+          attrs: {
+            rel: "icon",
+            href: "/favicon.ico",
+            sizes: "64x64",
+          },
+        },
       ],
       pagefind: false,
     }),
