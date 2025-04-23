@@ -1,0 +1,6 @@
+# Apply rules to all web crawlers
+User-agent: *
+
+Disallow: /pages/
+
+Sitemap: https://recruit-holdings-korec.pages.dev/sitemap-index.xml
