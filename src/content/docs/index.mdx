@@ -5,6 +5,7 @@ prev: false
 next: false
 ---
 
+import { Picture } from "astro:assets";
 import {
   Aside,
   Card,
@@ -13,6 +14,17 @@ import {
   Steps,
 } from "@astrojs/starlight/components";
 import ApplyButton from "../../components/ApplyButton.astro";
+import tokyoStation from "../../assets/tokyo_station.webp";
+
+<Picture
+  src={tokyoStation}
+  formats={["avif", "webp"]}
+  fallbackFormat="webp"
+  width="1920"
+  height="1080"
+  alt="리크루트 본사가 있는 도쿄역 이미지"
+  loading="eager"
+/>
 
 ## 📢 채용 특징
 
