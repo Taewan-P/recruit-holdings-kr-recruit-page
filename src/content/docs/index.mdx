@@ -5,7 +5,6 @@ prev: false
 next: false
 ---
 
-import { Picture } from "astro:assets";
 import {
   Aside,
   Card,
@@ -14,16 +13,6 @@ import {
   Steps,
 } from "@astrojs/starlight/components";
 import ApplyButton from "../../components/ApplyButton.astro";
-
-<Picture
-  src="https://recruit-holdings-banner.azurewebsites.net/random"
-  formats={["avif", "webp"]}
-  fallbackFormat="webp"
-  width="1920"
-  height="1080"
-  alt="리크루트 문구 홍보 이미지"
-  loading="eager"
-/>
 
 ## 📢 채용 특징
 
